@@ -14377,7 +14377,7 @@ const checkImage = () => {
     // 失敗したら再度実行
     if (code) {
         var newLine = zmaster.filter(function(item, index){
-            if (item.抜き品番 == code.substr(4,10)) return true;
+            if (item.抜き品番 == code.substr(3,10)) return true;
           });
         openModal(newLine)
     } else {
