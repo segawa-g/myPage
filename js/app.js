@@ -3,7 +3,7 @@ if (!navigator.mediaDevices) {
 }
 
 
-zmaster = [
+const zmaster = [
     {
       "棚版": 111,
       "抜き品番": "2C00AAA120",
@@ -14377,7 +14377,10 @@ const checkImage = () => {
     // QRコードの読み取りに成功したらモーダル開く
     // 失敗したら再度実行
     if (code) {
-        openModal(code.data.substr(3,10))
+        var newLine = zmaster.filter(function (element){
+          return element.抜き品番 == code.data.substr(3,10);
+        })
+        openModal(newLine.S品番)
     } else {
         setTimeout(() => { checkImage() }, 200)
     }
