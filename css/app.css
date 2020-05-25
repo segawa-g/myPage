@@ -60,6 +60,10 @@ html, body {
     word-break: break-all;
 }
 
+.modal-open {
+    display: none;
+}
+
 .modal-btn {
     -webkit-appearance: none;
     -moz-appearance: none;
