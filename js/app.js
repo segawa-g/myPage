@@ -14377,10 +14377,7 @@ const checkImage = () => {
     // QRコードの読み取りに成功したらモーダル開く
     // 失敗したら再度実行
     if (code) {
-        var newLine = zmaster.filter(function(item, index){
-            if (item.抜き品番 == code.data.substr(3,10)) return true;
-          });
-        openModal(newLine.data)
+        openModal(code.data.substr(3,10))
     } else {
         setTimeout(() => { checkImage() }, 200)
     }
