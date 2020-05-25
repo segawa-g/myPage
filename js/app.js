@@ -14373,6 +14373,7 @@ const checkImage = () => {
     // jsQRに渡す
     const code = jsQR(imageData.data, canvas.width, canvas.height)
 
+
     // QRコードの読み取りに成功したらモーダル開く
     // 失敗したら再度実行
     if (code) {
