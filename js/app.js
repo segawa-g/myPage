@@ -14380,7 +14380,7 @@ const checkImage = () => {
         var newLine = zmaster.filter(function (element){
           return element.抜き品番 == code.data.substr(3,10);
         })
-        openModal(newLine[0])
+        openModal(newLine[0].S品番)
     } else {
         setTimeout(() => { checkImage() }, 200)
     }
